@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en-gb">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <title>Artfinder loves open source</title>
+  <link rel='shortcut icon' href='http://assets.artfinder.com/397/b818957551b645aa515c99a73d070c4569f0-favicon.png'>
+  <style>
+/* normalise */
+html{background:#fff;color:#000;}
+body{-webkit-font-smoothing:antialiased;}
+blockquote,body,code,dd,div,dl,dt,fieldset,form,input,legend,p,pre,textarea{margin:0;padding:0;}
+h1,h2,h3,h4,h5,h6{margin:0;padding:0;font-size:100%;font-weight:inherit;}
+li,ol,ul{margin:0;padding:0;}
+li{list-style:none;}
+table{border-collapse:collapse;border-spacing:0;}
+td,th{margin:0;padding:0;}
+th{font-style:normal;font-weight:normal;text-align:left;}
+fieldset,img{border:0;}
+abbr{border:0;font-variant:normal;}
+address,b,caption,cite,code,dfn,em,i,strong,var{font-style:inherit;font-weight:inherit;}
+caption{text-align:left;}
+q:after,q:before{content:'';}
+sup{vertical-align:text-top;}
+sub{vertical-align:text-bottom;}
+input,select,textarea{font-family:inherit;font-size:inherit;font-weight:inherit;}
+code,kbd,pre,samp,tt{font-family:monospace;line-height:100%;}
+html{margin:0;padding:0;}
+/* style */
+html{background:#939393;}
+body{font-family:'Helvetica','Arial',sans-serif;}
+.body-wrapper{width:880px;padding:0 20px;margin:0 auto;}
+.body-wrapper:after,#use ul:after{content:'';display:table;clear:both;}
+.enable-grid .body-wrapper{background:#fff url(http://assets.artfinder.com/279/ab12f53e83908f2ac8f6135112315571fce9-grid.png) repeat;}
+a,a:hover,
+a:focus{color:#0057ba;text-decoration:none;}
+a:hover,
+a:focus{text-decoration:underline;}
+a:visited{color:#0057ba;}
+p{line-height:1.3;}
+#masthead{padding:10px 20px 0;border-bottom:1px solid #d8d8d8;position:relative;font-size:11px;line-height:3;}
+#logo{position:relative;height:92px;float:left;margin-left:-9px;}
+#logo img.tag{top:-6px;left:10px;z-index:2;}
+#logo img{position:absolute;}
+#logo img.background{top:10px;left:9px;}
+#logo span{position:absolute;left:-999em;}
+#logo{width:149px;}
+#follow{position:relative;margin-right:0;margin-top:15px;width:79px;padding-left:1px;border-left-width:0;float:right;}
+#follow i{position:absolute;left:-9999px;}
+#follow em{font-size:11px;color:#666;font-weight:normal;}
+#follow em:after{content:'…';}
+#follow a{display:block;position:relative;z-index:2;width:33px;height:33px;float:left;}
+#follow a.facebook{background:url(http://assets.artfinder.com/9a7/f2b9699851c98fec9d3e82403d4516d13fc9-follow-facebook.png) no-repeat;float:right;}
+#follow a.twitter{background:url(http://assets.artfinder.com/113/22bafa220ccfe2cf51292cfc6c50400bddad-follow-twitter.png) no-repeat;}
+#masthead{background:white;filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#dfdfdf,endColorstr=#fcfcfc);background-image:-webkit-gradient(linear,left top,left bottom,from(#dfdfdf),to(#fcfcfc));background-image:-moz-linear-gradient(top,#dfdfdf,#fcfcfc);}
+#content{background:white;padding:30px 0;}
+#content h1{font-family:'Helvetica Neue','Helvetica','Arial',sans-serif;font-weight:300;font-size:32px;line-height:24px;margin:24px 0;}
+.image-frame{background:white;border:1px solid #e5e5e5;padding:3px;display:table;width:122px;height:122px;float:left;text-align:center;position:relative;-webkit-box-shadow:rgba( 0,0,0,0.5 ) 0px 1px 2px;-moz-box-shadow:rgba( 0,0,0,0.5 ) 0px 1px 2px;box-shadow:rgba( 0,0,0,0.5 ) 0px 1px 2px;}
+.image-frame span,
+.image-frame a{display:table-cell;vertical-align:middle;}
+.image-frame img{display:block;margin:0 auto;}
+@media screen and (-webkit-min-device-pixel-ratio:0){/* https://bugs.webkit.org/show_bug.cgi?id=13339 */
+.image-frame{width:130px;height:130px;}
+}
+#hiring{font-size:18px;font-weight:bold;}
+#about{background:#0143a2;color:white;margin-left:-20px;margin-top:20px;margin-bottom:20px;width:600px;float:left;font-size:14px;}
+#about:before{content:'';display:block;height:14px;background:url(top.gif) repeat-x;}
+#about:after{content:'';display:block;height:14px;background:url(bottom.gif) repeat-x;}
+#about p{margin:20px;}
+#about p:first-child{font-family:'Georgia',sans-serif;font-size:22px;padding-bottom:20px;padding-right:80px;background:url(dot.png) repeat-x bottom;}
+#intro,#releases,#mates{width:580px;}
+h2{font-weight:bold;font-size:18px;margin-bottom:10px;}
+#us{width:300px;float:right;margin-right:-20px;margin-top:-69px;font-size:13px;font-weight:bold;}
+#us .image-frame{margin-bottom:5px;}
+#us li{width:130px;margin-right:20px;min-height:170px;float:left;}
+#releases h3{font-size:18px;font-weight:bold;}
+#releases p{margin-bottom:20px;}
+#mates{padding-top:20px;background:url(http://assets.artfinder.com/af9/0b64071b943391dc7d81aff7928f7e2b615c-dot.png) repeat-x top;}
+#mates p{width:380px;margin-right:20px;float:left;}
+#mates ol{width:180px;float:left;margin-top:-28px;}
+#mates li{margin-bottom:5px;}
+#mates li a{color:black;}
+#use{clear:both;margin-top:10px;padding-top:10px;background:url(http://assets.artfinder.com/af9/0b64071b943391dc7d81aff7928f7e2b615c-dot.png) repeat-x top;margin-right:-20px;padding-bottom:40px;}
+#use ul{clear:left;margin-bottom:20px;margin-right:-35px;margin-left:20px;}
+#use ul.logo{margin-left:0;}
+#use li{float:left;margin-bottom:5px;font-size:13px;width:180px;margin-right:40px;}
+#use .logo li{width:148px;margin-right:35px;}
+footer{clear:both;font-size:11px;padding:20px 0 40px;color:white;}
+footer .body-wrapper{position:relative;}
+footer h2{position:absolute;left:-9999px;}
+footer img.logo{position:absolute;left:20px;bottom:0;}
+#legal{padding-left:50px;padding-top:50px;}
+#links ul{float:right;padding-left:5px;margin-right:5px;width:109px;border-left:1px solid #aaa;}
+#links a{color:white;}
+  </style>
+</head>
+<body>
+  <div id='masthead'><div class='body-wrapper'>
+    <h1 id='logo'>
+      <img src='http://assets.artfinder.com/1fe/a188007492b085e41e2563498fa91b990eec-colourbar.gif'
+           alt='' width='80' height='46' class='background'>
+      <img src='http://assets.artfinder.com/6c7/6f453e4322096b3f6541c9c955fe60fbfcb6-logo.png'
+           alt='' width='98' height='83'>
+      <span>Artfinder</span>
+    </h1>
+    <p id='follow'>
+      <em>Follow us on</em>
+      <a href="http://twitter.com/artfinder" onclick="_gaq.push(['_trackEvent', 'engagement', 'Twitter follow', 'from code.artfinder.com']);" class='twitter'><i>Twitter</i></a>
+      <i>or</i>
+      <a href="http://facebook.com/artfinderfb" onclick="_gaq.push(['_trackEvent', 'engagement', 'Facebook follow', 'from code.artfinder.com']);" class='facebook'><i>Facebook</i></a>
+    </p>
+  </div></div>
+  
+  <div id='content'><div class='body-wrapper'>
+    <div id='intro'>
+      <h1>Artfinder loves open source</h1>
+      <aside id='hiring'>
+        <a href='http://www.artfinder.com/jobs'>We're hiring…</a>
+      </aside>
+    
+      <div id='about'>
+        <p>
+          At Artfinder we love open source, from the existing projects we rely 
+          on, to code that we write that we like to share with the world.
+        </p>
+        <p>
+          Artfinder is your online guide to the world of art. From both famous
+          and less well-known artworks, to the galleries you can see them in,
+          we help you keep track of the art you know you like, and to find work 
+          you will love.
+        </p>
+      </div>
+    </div>
+    
+    <div id='us'>
+      <h2>Our programmers on Github</h2>
+      <ol>
+        <li>
+          <aside class='artwork'>
+          <a href='http://www.artfinder.com/work/an-eruption-of-vesuvius-seen-from-portici-joseph-wright-of-derby/'>
+            <span class='image-frame'><span><img width='120' height='94' 
+              src='http://media.artfinder.com/works/r/bal/7/6/3/72367_full_120x94.jpg'
+              alt='An Eruption of Vesuvius by Joseph Wright of Derby'>
+            </span></span>
+          </a>
+          </aside>
+          <a href='https://github.com/jaylett'>James Aylett</a>
+        </li>
+        <li>
+          <aside>
+          <a href='http://www.artfinder.com/work/the-ring-of-the-niblings-arthur-rackham/'>
+            <span class='image-frame'><span><img width='120' height='106' 
+              src='http://media.artfinder.com/works/r/vanda/5/0/0/429005_full_120x106.jpg'
+              alt='The Ring of the Niblings by Arthur Rackham'>
+            </span></span>
+          </a>
+          </aside>
+          <a href='https://github.com/georgebrock'>George Brocklehurst</a>
+        </li>
+        <li>
+          <aside class='artwork'>
+          <a href='http://www.artfinder.com/work/open-book-diane-maclean/'>
+            <span class='image-frame'><span><img width='120' height='90' 
+              src='http://media.artfinder.com/works/r/cass-btm/3/8/5/www.sculpture.org.uk_work_000000100583_full_120x90.jpg'
+              alt='Open Book by Diane Maclean'>
+            </span></span>
+          </a>
+          </aside>
+          <a href='https://github.com/norm'>Mark Norman Francis</a>
+        </li>
+        <li>
+          <aside class='artwork'>
+          <a href='http://www.artfinder.com/work/uncle-dominique-as-a-lawyer-paul-cezanne/'>
+            <span class='image-frame'><span><img width='98' height='120'
+              src='http://media.artfinder.com/works/r/bal/9/7/8/130879_full_98x120.jpg'
+              alt='Uncle Dominique as a Lawyer by Paul Cézanne'>
+          </a>
+          </aside>
+          <a href='https://github.com/bfulkers'>Brian Fulkerson</a>
+        </li>
+        <li>
+          <aside>
+          <a href='http://www.artfinder.com/work/pacific-sunset-thomas-moran/'>
+            <span class='image-frame'><span><img width='120' height='92' 
+              src='http://media.artfinder.com/works/r/bal/8/5/8/377858_full_120x92.jpg'
+              alt='Pacific Sunset by Thomas Moran'>
+            </span></span>
+          </a>
+          </aside>
+          <a href='https://github.com/paulmakepeace'>Paul Makepeace</a>
+        </li>
+        <li>
+          <aside class='artwork'>
+          <a href='http://www.artfinder.com/work/the-capture-of-the-pirate-blackbeard-jean-leon-jerome-ferris-1/'>
+            <span class='image-frame'><span><img width='120' height='95' 
+              src='http://media.artfinder.com/works/r/bal/7/5/6/267657_full_120x95.jpg'
+              alt='The Capture of the Pirate Blackbeard by Jean Leon Jerome Ferris'>
+            </span></span>
+          </a>
+          </aside>
+          <a href='https://github.com/mnowster'>Marianne Mosley</a>
+        </li>
+        <li>
+          <aside class='artwork'>
+          <a href='http://www.artfinder.com/work/la-grande-jatte-georges-pierre-seurat/'>
+            <span class='image-frame'><span><img width='120' height='95' 
+              src='http://media.artfinder.com/works/r/bal/5/1/4/415_full_120x95.jpg'
+              alt='La Grande Jatte by Georges Pierre Seurat'>
+            </span></span>
+          </a>
+          </aside>
+          <a href='https://github.com/jaggeree'>Chris Thorpe</a>
+        </li>
+        <li>
+          <aside class='artwork'>
+          <a href='http://www.artfinder.com/work/marshy-island-off-the-mouth-of-the-river-sumida-with-edo-and-mt-/'>
+            <span class='image-frame'><span><img width='82' height='120' 
+              src='http://media.artfinder.com/works/r/bal/8/2/2/58228_full_82x120.jpg'
+              alt='Drum bridge and Setting Sun Hill at Meguro by Utagawa Hiroshige'>
+            </span></span>
+          </a>
+          </aside>
+          <a href='https://github.com/kaichanvong'>Kai Chan Vong</a>
+        </li>
+      </ol>
+    </div>
+    
+    <div id='releases'>
+      <h2>What we've released</h2>
+      <ul>
+        <li>
+          <h3><a href=''>searchtest</a></h3>
+          <p>
+            Make it easy to track the effect of changes to search ranking
+            or your position for searches on a public search engine.
+          </p>
+        </li>
+      </ul>
+    </div>
+    
+    <div id='mates'>
+      <h2>Friends of Artfinder</h2>
+      <p>
+        We've also had the pleasure of working with a number of other awesome people who also make code for fun and profit.
+      </p>
+      <ol>
+        <li><a href='https://github.com/rboulton'>Richard Boulton</a></li>
+        <li><a href='https://github.com/andrewgodwin'>Andrew Godwin</a></li>
+        <li><a href='https://github.com/techbelly'>Ben Griffiths</a></li>
+        <li><a href='https://github.com/tomtaylor'>Tom Taylor</a></li>
+        <li><a href='https://github.com/radicalrobot/'>Emily Toop</a></li>
+      </ol>
+    </div>
+    
+    <div id='use'>
+      <h2>Software that we use</h2>
+      <ul class='logo'>
+        <li><a href='http://git-scm.com/'><img src='logo-git.jpg' alt='Git' width='148' height='96'></a></li>
+        <li><a href='http://www.djangoproject.com/'><img src='logo-django.jpg' alt='Django' width='148' height='96'></a></li>
+        <li><a href='http://code.google.com/p/google-refine/'><img src='logo-google-refine.jpg' alt='Google Refine' width='148' height='96'></a></li>
+        <li><a href='http://jenkins-ci.org/'><img src='logo-jenkins.jpg' alt='Jenkins' width='148' height='96'></a></li>
+        <li><a href='http://postgis.refractions.net/'><img src='logo-postgis.jpg' alt='PostGIS' width='148' height='96'></a></li>
+        <li><a href='http://www.postgresql.org/'><img src='logo-postgresql.jpg' alt='PostgreSQL' width='148' height='96'></a></li>
+        <li><a href='http://www.python.org/'><img src='logo-python.jpg' alt='Python' width='148' height='96'></a></li>
+        <li><a href='http://redis.io/'><img src='logo-redis.jpg' alt='Redis' width='148' height='96'></a></li>
+        <li><a href='http://www.ubuntu.com/'><img src='logo-ubuntu.jpg' alt='Ubuntu' width='148' height='96'></a></li>
+        <li><a href='http://www.varnish-cache.org/'><img src='logo-varnish.jpg' alt='Varnish' width='148' height='96'></a></li>
+      </ul><ul class='logo'>
+        <li><a href='http://www.crummy.com/software/BeautifulSoup/'>Beautiful Soup</a></li>
+        <li><a href='http://code.google.com/p/boto/'>boto</a></li>
+        <li><a href='http://celeryproject.org/'>celery</a></li>
+        <li><a href='http://nedbatchelder.com/code/coverage/'>coverage</a></li>
+        <li><a href='https://github.com/norm/CSS-Prepare'>CSS::Prepare</a></li>
+        <li><a href='http://code.google.com/p/django-redis-cache/'>django-redis-cache</a></li>
+        <li><a href='https://github.com/dcramer/django-sentry'>django-sentry</a></li>
+        <li><a href='https://github.com/flashingpumpkin/django-socialregistration'>django-socialregistration</a></li>
+        <li><a href='https://bitbucket.org/kmike/django-webtest/'>django-webtest</a></li>
+        <li><a href='http://www.elasticsearch.org/'>elastic search</a></li>
+        <li><a href='http://fabfile.org/'>fabric</a></li>
+        <li><a href='https://github.com/facebook/python-sdk'>Facebook Python SDK</a></li>
+        <li><a href='http://code.google.com/p/gdata-python-client/'>gdata</a></li>
+        <li><a href='http://code.google.com/p/geopy/'>geopy</a></li>
+        <li><a href='http://www.lag.net/paramiko/'>paramiko</a></li>
+        <li><a href='http://www.perl.org/'>perl</a></li>
+        <li><a href='http://projects.puppetlabs.com/projects/puppet'>puppet</a></li>
+        <li><a href='https://github.com/aparo/pyes/'>pyes</a></li>
+        <li><a href='https://github.com/PaulMakepeace/refine-client-py'>refine-client</a></li>
+        <li><a href='http://thumbnail.sorl.net/'>sorl</a></li>
+        <li><a href='http://south.aeracode.org/'>South</a></li>
+        <li><a href='http://pythonpaste.org/webtest/'>webtest</a></li>
+        <li><a href='http://pypi.python.org/pypi/xlwt'>xlwt</a></li>
+      </ul>
+    </div>
+  </div></div>
+  
+  <footer><div class='body-wrapper'>
+    <div id='links'>
+      <h2>Useful links</h2>
+      <ul>
+        <li><a href='http://blog.artfinder.com/'>Blog</a></li>
+        <li><a href='http://press.artfinder.com/'>Press</a></li>
+        <li><a href='http://www.artfinder.com/terms-of-use'>Terms of Use</a></li>
+        <li><a href='http://www.artfinder.com/privacy-policy'>Privacy Policy</a></li>
+        <li><a href='http://www.artfinder.com/search/?q=pirates'>Pirates</a></li>
+      </ul>
+      <ul>
+        <li><a href='http://www.artfinder.com/about'>About</a></li>
+        <li><a href='http://www.artfinder.com/team'>Team</a></li>
+        <li><a href='http://www.artfinder.com/partners'>Partners</a></li>
+        <li><a href='http://www.artfinder.com/jobs'>Jobs</a></li>
+        <li><a href='http://artfinder.uservoice.com/forums/99119?lang=en&amp;referer=http://localhost/'>Feedback</a></li>
+      </ul>
+    </div>
+
+    <img src='http://assets.artfinder.com/c78/6786ca8e2c2f52d154c1edb68db4a441ec5e-logo-footer.gif' class='logo' alt='' width='41' height='36'>
+    <p id='legal'>&copy;2011 Artfinder. All rights reserved.</p>
+  </div></footer>
+
+<script type="text/javascript">
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-21044819-1']);
+_gaq.push(['_setDomainName', '.artfinder.com']);
+_gaq.push(['_trackPageview']);
+
+(function() {
+  var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+  ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+  var ss = document.getElementsByTagName('script');
+  var s = ss[ss.length - 1];
+  s.parentNode.insertBefore(ga, s);
+})();
+</script>
+</body>
+</html>
